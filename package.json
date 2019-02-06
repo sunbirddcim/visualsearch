@@ -6,16 +6,18 @@
     "doc": "docs",
     "lib": "lib"
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sunbirddcim/sb_visualsearch.git"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/sunbirddcim/sb_visualsearch/issues"
   },
   "homepage": "https://github.com/sunbirddcim/sb_visualsearch#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "backbone": "1.3.3",
     "jquery": "1.11.0",
     "jquery-ui": "1.12.1",
