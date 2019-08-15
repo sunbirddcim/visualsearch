@@ -54,9 +54,7 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 /* ===================== */
 
 .VS-search {
-  font-family: Arial, sans-serif;
-  color: #373737;
-  font-size: 12px;
+
 }
 .VS-search input {
   display: block;
@@ -72,7 +70,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
   width: 100%;
 }
 .VS-interface, .VS-search .dialog, .VS-search input {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
   line-height: 1.1em;
 }
 
@@ -107,8 +104,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
       top: 7px;
       left: 4px;
       margin: 0 20px 0 22px;
-      color: #808080;
-      font-size: 14px;
   }
   .VS-search .VS-search-box.VS-focus .VS-placeholder,
   .VS-search .VS-search-box .VS-placeholder.VS-hidden {
@@ -126,11 +121,9 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
   .VS-search .VS-input-width-tester {
     padding: 6px 0;
     float: left;
-    color: #808080;
     font: 13px/17px Helvetica, Arial;
   }
   .VS-search.VS-focus input {
-    color: #606060;
   }
   .VS-search .VS-icon-search {
     position: absolute;
@@ -176,7 +169,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
     text-transform: uppercase;
     font-weight: bold;
     font-size: 10px;
-    color: #808080;
     padding: 8px 0 5px;
     line-height: 13px;
     cursor: pointer;
@@ -194,8 +186,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
   .VS-search .search_facet input {
     margin: 0;
     padding: 0;
-    color: #000;
-    font-size: 13px;
     line-height: 16px;
     padding: 5px 0 5px 4px;
     height: 16px;
@@ -209,7 +199,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
   }
   .VS-search .search_facet.is_editing input,
   .VS-search .search_facet.is_selected input {
-    color: #000;
   }
   .VS-search.VS-readonly .search_facet .search_facet_remove {
     display: none;
@@ -230,11 +219,9 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
     }
   .VS-search .search_facet.is_editing .category,
   .VS-search .search_facet.is_selected .category {
-    color: #000;
   }
   .VS-search .search_facet.search_facet_maybe_delete .category,
   .VS-search .search_facet.search_facet_maybe_delete input {
-    color: darkred;
   }
 
 /* ================ */
@@ -257,7 +244,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
     position: relative;
   }
   .VS-search .search_input.is_editing input {
-    color: #202020;
   }
 
 /* ================ */
@@ -297,14 +283,12 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
     background-color: #B7B7B7;
     text-shadow: 0 -1px 0 #999;
     font-weight: bold;
-    color: white;
     cursor: default;
   }
   .VS-interface.ui-autocomplete .ui-menu-item {
       float: none;
   }
   .VS-interface.ui-autocomplete .ui-menu-item a {
-    color: #000;
     outline: none;
     display: block;
     padding: 3px 4px 5px;
@@ -329,7 +313,6 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
     border-bottom: 1px solid #1459e9;
     border-left: none;
     border-right: none;
-    color: white;
     margin: 0;
   }
   .VS-interface.ui-autocomplete .ui-corner-all {
