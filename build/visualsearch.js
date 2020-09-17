@@ -1050,6 +1050,7 @@ VS.ui.SearchInput = Backbone.View.extend({
         e.preventDefault();
         // stopPropogation does weird things in jquery-ui 1.9
         // e.stopPropagation();
+        if(!ui.item) return false;
         var remainder = this.addTextFacetRemainder(ui.item.label || ui.item.value);
         var position  = this.options.position + (remainder ? 1 : 0);
         this.app.searchBox.addFacet(ui.item instanceof String ? ui.item : ui.item.value, '', position);
