@@ -10,11 +10,11 @@ task :build do
     :output_folder => "build"
   })
   
-  $VS_MIN = true
-  Jammit.package!({
-    :config_path   => "assets.yml",
-    :output_folder => "build-min"
-  })
+  # $VS_MIN = true
+  # Jammit.package!({
+  #   :config_path   => "assets.yml",
+  #   :output_folder => "build-min"
+  # })
   
   # Move the JSTs back to lib to accomodate the demo page.
   FileUtils.mv("build/visualsearch_templates.js", "lib/js/templates/templates.js")
