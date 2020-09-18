@@ -5833,6 +5833,7 @@ $.widget( "ui.autocomplete", {
 				}
 
 				// Announce the value in the liveRegion
+				// fixme
 				label = ui.item.attr( "aria-label" ) || (item && item.value);
 				if ( label && $.trim( label ).length ) {
 					this.liveRegion.children().hide();
