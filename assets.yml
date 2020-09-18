@@ -7,22 +7,7 @@ compress_assets:        <% if $VS_MIN %>on<% else %>off<% end %>
 javascripts:
   dependencies:
     - vendor/jquery-3.5.1.js
-    
-    # 1
-    # - vendor/ui/*.js
-    # - vendor/ui/widgets/*.js
-    
-    # 2
     - vendor/jquery-ui.js
-    
-    # 3
-    # - vendor/autocomplete.js
-    
-    # - vendor/core.js
-    # - vendor/menu.js
-    # - vendor/position.js
-    # - vendor/widget.js
-    
     - vendor/underscore-*.js
     - vendor/backbone-*.js
   visualsearch:
