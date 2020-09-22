@@ -1,4 +1,3 @@
-// jquery-ui dependent module
 // import "jquery-ui/ui/widget"
 // import "jquery-ui/ui/position"
 // import "jquery-ui/ui/widgets/menu"
