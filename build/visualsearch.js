@@ -1063,7 +1063,9 @@ VS.ui.SearchInput = Backbone.View.extend({
       var category = '';
       _.each(items, _.bind(function(item, i) {
         if (item.category && item.category != category) {
-          ul.append('<li class="ui-autocomplete-category">'+item.category+'</li>');
+          var li = $('<li class="ui-autocomplete-category">'+item.category+'</li>');
+          li.data('ui-autocomplete-item', item);
+          ul.append(li);
           category = item.category;
         }
 
