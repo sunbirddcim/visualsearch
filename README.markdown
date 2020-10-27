@@ -17,32 +17,6 @@ To build the visualsearch bundled files, you can run
 $ rake build
 ```
 
-## Testing
-
-### Local Test
-
-Use python to run up a local server then you can test the index.html by http://localhost:8000
-
-```bash
-$ cd /visualsearch# visualsearch
-
-This repo contains the customized visualsearch used for dcTrack UI
-
-
-### Clone the Repo
-
-```bash
-$ git clone https://github.com/sunbirddcim/visualsearch.git
-```
-
-### Building the Application
-
-To build the visualsearch bundled files, you can run
-
-```bash
-$ rake build
-```
-
 ## Test
 
 ### Local Test
@@ -60,19 +34,6 @@ $ python -m http.server
 1. Update visualsearch and run "rake build" to overwrite the bundled files
 2. Push your branch to remote repo
 3. Reinstall visualsearch module in dctrack_app_client
-
-```bash
-$ cd /dctrack_app_client
-$ npm uninstall visualsearch
-$ npm install visualrsearch@git+https://github.com/sunbirdcim/visualsearch.git#{your branch name}
-```
-$ python -m http.server
-```
-
-### Production Test
-
-First, push your branch to remote repo
-Then, reinstall visualsearch module in dctrack_app_client
 
 ```bash
 $ cd /dctrack_app_client
