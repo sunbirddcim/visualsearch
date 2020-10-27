@@ -2,7 +2,7 @@ require 'rubygems'
 require 'jammit'
 require 'fileutils'
 
-desc "Use Jammit to compile the multiple versions of Visual Search"
+desc "Use Jammit to compile Visual Search bundled files"
 task :build do
   $VS_MIN = false
   Jammit.package!({
@@ -20,7 +20,7 @@ task :build do
   FileUtils.mv("build/visualsearch_templates.js", "lib/js/templates/templates.js")
       
   # Fix image url paths.
-  ['build', 'build-min'].each do |build|
+  ['build'].each do |build|
     File.open("#{build}/visualsearch.css", 'r+') do |file|
       css = file.read
       css.gsub!(/url\((.*?)images\/embed\/icons/, 'url(../images/embed/icons')
