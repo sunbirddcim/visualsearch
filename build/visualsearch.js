@@ -1,6 +1,3 @@
-import 'backbone';
-import 'visualsearch/build/dependencies';
-
 // This is the annotated source code for
 // [VisualSearch.js](http://documentcloud.github.com/visualsearch/),
 // a rich search box for real data.
@@ -616,7 +613,7 @@ VS.ui.SearchFacet = Backbone.View.extend({
       source    : _.bind(this.autocompleteValues, this),
       minLength : 0,
       delay     : 0,
-      autoFocus : true,
+      autoFocus : false,
       position  : {offset : "0 5"},
       create    : _.bind(function(e, ui) {
         $(this.el).find('.ui-autocomplete-input').css('z-index','auto');
@@ -1041,7 +1038,7 @@ VS.ui.SearchInput = Backbone.View.extend({
     this.box.autocomplete({
       minLength : this.options.showFacets ? 0 : 1,
       delay     : 50,
-      autoFocus : true,
+      autoFocus : false,
       position  : {offset : "0 -1"},
       source    : _.bind(this.autocompleteValues, this),
       // Prevent changing the input value on focus of an option
@@ -1053,6 +1050,7 @@ VS.ui.SearchInput = Backbone.View.extend({
         e.preventDefault();
         // stopPropogation does weird things in jquery-ui 1.9
         // e.stopPropagation();
+        if(!ui.item) return false;
         var remainder = this.addTextFacetRemainder(ui.item.label || ui.item.value);
         var position  = this.options.position + (remainder ? 1 : 0);
         this.app.searchBox.addFacet(ui.item instanceof String ? ui.item : ui.item.value, '', position);
@@ -1065,7 +1063,9 @@ VS.ui.SearchInput = Backbone.View.extend({
       var category = '';
       _.each(items, _.bind(function(item, i) {
         if (item.category && item.category != category) {
-          ul.append('<li class="ui-autocomplete-category">'+item.category+'</li>');
+          var li = $('<li class="ui-autocomplete-category">'+item.category+'</li>');
+          li.data('ui-autocomplete-item', item);
+          ul.append(li);
           category = item.category;
         }
 
