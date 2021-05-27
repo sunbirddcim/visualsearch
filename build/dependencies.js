@@ -30051,7 +30051,7 @@ var widgetsTooltip = $.ui.tooltip;
     var results = [];
     var seen = [];
     each(initial, function(value, index) {
-      if (isSorted ? (!index || seen[seen.length - 1] !== value) : !_.contains(seen, value)) {
+      if (isSorted ? (!index || seen[seen.length - 1] !== value) : !_.includes(seen, value)) {
         seen.push(value);
         results.push(array[index]);
       }
@@ -30080,7 +30080,7 @@ var widgetsTooltip = $.ui.tooltip;
   // Only the elements present in just the first array will remain.
   _.difference = function(array) {
     var rest = concat.apply(ArrayProto, slice.call(arguments, 1));
-    return _.filter(array, function(value){ return !_.contains(rest, value); });
+    return _.filter(array, function(value){ return !_.includes(rest, value); });
   };
 
   // Zip together multiple lists into a single array -- elements that share
@@ -30420,7 +30420,7 @@ var widgetsTooltip = $.ui.tooltip;
     var copy = {};
     var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
     for (var key in obj) {
-      if (!_.contains(keys, key)) copy[key] = obj[key];
+      if (!_.includes(keys, key)) copy[key] = obj[key];
     }
     return copy;
   };

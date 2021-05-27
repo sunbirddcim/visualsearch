@@ -746,7 +746,7 @@ autocomplete menu.</p>
         <span class="hljs-keyword">if</span> (prefix.label) <span class="hljs-keyword">return</span> prefix.label;
         <span class="hljs-keyword">else</span>              <span class="hljs-keyword">return</span> prefix;
       });
-      <span class="hljs-keyword">if</span> (_.contains(labels, query)) {
+      <span class="hljs-keyword">if</span> (_.includes(labels, query)) {
         e.preventDefault();
         <span class="hljs-keyword">var</span> remainder = <span class="hljs-keyword">this</span>.addTextFacetRemainder(query);
         <span class="hljs-keyword">var</span> position  = <span class="hljs-keyword">this</span>.options.position + (remainder?<span class="hljs-number">1</span>:<span class="hljs-number">0</span>);

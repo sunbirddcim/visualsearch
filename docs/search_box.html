@@ -397,7 +397,7 @@ specify position, in the case of adding facets from an inbetween input.</p>
             
             <div class="content"><div class='highlight'><pre>  addedFacet : <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(model)</span> {</span>
     <span class="hljs-keyword">this</span>.renderFacets();
-    <span class="hljs-keyword">var</span> facetView = _.detect(<span class="hljs-keyword">this</span>.facetViews, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(view)</span> {</span>
+    <span class="hljs-keyword">var</span> facetView = _.find(<span class="hljs-keyword">this</span>.facetViews, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(view)</span> {</span>
       <span class="hljs-keyword">if</span> (view.model == model) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
     });
 
@@ -681,7 +681,7 @@ has clicked on either a facet or an input, and properly selects the view.</p>
 
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.$(e.target).is(<span class="hljs-string">'.category,input'</span>)) {
       <span class="hljs-keyword">var</span> el   = $(e.target).closest(<span class="hljs-string">'.search_facet,.search_input'</span>);
-      <span class="hljs-keyword">var</span> view = _.detect(<span class="hljs-keyword">this</span>.facetViews.concat(<span class="hljs-keyword">this</span>.inputViews), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v)</span> {</span>
+      <span class="hljs-keyword">var</span> view = _.find(<span class="hljs-keyword">this</span>.facetViews.concat(<span class="hljs-keyword">this</span>.inputViews), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v)</span> {</span>
         <span class="hljs-keyword">return</span> v.el == el[<span class="hljs-number">0</span>];
       });
       <span class="hljs-keyword">if</span> (view.type == <span class="hljs-string">'facet'</span>) {
@@ -979,7 +979,7 @@ the last search input. Also start the triple-click timer.</p>
             
             <div class="content"><div class='highlight'><pre>  removeFocus : <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
     <span class="hljs-keyword">this</span>.app.options.callbacks.blur();
-    <span class="hljs-keyword">var</span> focus = _.any(<span class="hljs-keyword">this</span>.facetViews.concat(<span class="hljs-keyword">this</span>.inputViews), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(view)</span> {</span>
+    <span class="hljs-keyword">var</span> focus = _.some(<span class="hljs-keyword">this</span>.facetViews.concat(<span class="hljs-keyword">this</span>.inputViews), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(view)</span> {</span>
       <span class="hljs-keyword">return</span> view.isFocused();
     });
     <span class="hljs-keyword">if</span> (!focus) <span class="hljs-keyword">this</span>.$(<span class="hljs-string">'.VS-search-box'</span>).removeClass(<span class="hljs-string">'VS-focus'</span>);

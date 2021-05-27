@@ -143,7 +143,7 @@ to the server for parsing and searching.</p>
 
     <span class="hljs-keyword">if</span> (!value) <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>;
 
-    <span class="hljs-keyword">if</span> (!_.contains(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">"app"</span>).options.unquotable || [], category) &amp;&amp; category != remainder) {
+    <span class="hljs-keyword">if</span> (!_.includes(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">"app"</span>).options.unquotable || [], category) &amp;&amp; category != remainder) {
       value = <span class="hljs-keyword">this</span>.quoteValue(value);
     }
 
