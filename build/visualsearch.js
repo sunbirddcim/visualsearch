@@ -25,7 +25,8 @@
 
   // Sets the version for VisualSearch to be used programatically elsewhere.
   VS.VERSION = '0.5.1';
-  VS.HARD_CODED_IP = '192.168.46.111'+Math.random();
+  VS.HARD_CODED_IP = '192.168.46.111';
+  VS.RANDO = Math.random();
 
   VS.VisualSearch = function(options) {
     var defaults = {
