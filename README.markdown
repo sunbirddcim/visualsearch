@@ -2,7 +2,6 @@
 
 This repo contains the customized visualsearch used for dcTrack UI
 
-
 ### Clone the Repo
 
 ```bash
