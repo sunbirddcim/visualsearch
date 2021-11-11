@@ -23,10 +23,8 @@ task :build do
   ['build'].each do |build|
     File.open("#{build}/visualsearch.css", 'r+') do |file|
       css = file.read
-      css.gsub!(/url\((.*?)images\/embed\/icons/, 'url(../images/embed/icons')
-      file.rewind
-      file.write(css)
-      file.truncate(css.length)
+      new_css = css.gsub(/url\((.*?)images\/embed\/icons/, 'url(../images/embed/icons')
+      File.open("#{build}/visualsearch.css", "w") { |file| file.puts new_css }
     end
   end
 end

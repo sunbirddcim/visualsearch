@@ -7,7 +7,7 @@
   .VS-search .VS-icon-cancel {
     width: 11px; height: 11px;
     background-position: center 0;
-    background-image: url(../images/embed/icons/cancel_search.png?1311104738);
+    background-image: url(../images/embed/icons/cancel_search.png?1600764712);
     cursor: pointer;
   }
     .VS-search .VS-icon-cancel:hover {
@@ -15,7 +15,7 @@
     }
   .VS-search .VS-icon-search {
     width: 12px; height: 12px;
-    background-image: url(../images/embed/icons/search_glyph.png?1311104738);
+    background-image: url(../images/embed/icons/search_glyph.png?1600764712);
   }
 
 /*------------------------------ RESET + DEFAULT STYLES ---------------------------------*/
@@ -305,4 +305,37 @@ Source: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
   }
   .VS-interface.ui-autocomplete .ui-menu-item a {
     color: #000;
-    outline: none
+    outline: none;
+    display: block;
+    padding: 3px 4px 5px;
+    border-radius: none;
+    line-height: 1;
+    background-color: #F8F8F8;
+    background-image: -moz-linear-gradient(top, #F8F8F8, #F3F3F3); /* FF3.6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F8F8F8), to(#F3F3F3)); /* Saf4+, Chrome */
+    background-image: linear-gradient(top, #F8F8F8, #F3F3F3);
+    border-top: 1px solid #FAFAFA;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .VS-interface.ui-autocomplete .ui-menu-item a:active {
+    outline: none;
+  }
+  .VS-interface.ui-autocomplete .ui-menu-item .ui-state-hover, .VS-interface.ui-autocomplete .ui-menu-item .ui-state-focus {
+    background-color: #6483F7;
+    background-image: -moz-linear-gradient(top, #648bF5, #2465f3); /* FF3.6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#648bF5), to(#2465f3)); /* Saf4+, Chrome */
+    background-image: linear-gradient(top, #648bF5, #2465f3);
+    border-top: 1px solid #5b83ec;
+    border-bottom: 1px solid #1459e9;
+    border-left: none;
+    border-right: none;
+    color: white;
+    margin: 0;
+  }
+  .VS-interface.ui-autocomplete .ui-corner-all {
+    border-radius: 0;
+  }
+  .VS-interface.ui-autocomplete li {
+    list-style: none;
+    width: auto;
+  }

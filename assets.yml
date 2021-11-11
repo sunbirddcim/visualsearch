@@ -1,4 +1,6 @@
+# config to build a visualsearch-datauri.css
 embed_assets:           datauri
+
 javascript_compressor:  closure
 template_function:      _.template
 gzip_assets:            <% if $VS_MIN %>on<% else %>off<% end %>
