@@ -1,4 +1,4 @@
-node {
+node('c8_builder') {
   stage('SCM') {
     checkout scm
   }
