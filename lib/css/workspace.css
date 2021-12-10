@@ -200,7 +200,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   top: 5px;
-  opacity: 0.97;
   box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5); -moz-box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5);
 }
 .VS-interface.ui-autocomplete .ui-autocomplete-category {
