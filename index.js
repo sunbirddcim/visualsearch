@@ -6,4 +6,4 @@ import "jquery-ui/ui/widgets/autocomplete";
 
 import 'visualsearch/build/dependencies';
 import 'visualsearch/build/visualsearch';
-export {VS};
+export default {VS};
