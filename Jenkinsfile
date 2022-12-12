@@ -1,4 +1,4 @@
-node('c8_builder') {
+node('rocky_agent') {
   stage('SCM') {
     checkout scm
   }
