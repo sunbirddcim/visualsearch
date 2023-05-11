@@ -38,5 +38,5 @@ $ python -m http.server
 ```bash
 $ cd /dctrack_app_client
 $ npm uninstall visualsearch
-$ npm install visualrsearch@git+https://github.com/sunbirdcim/visualsearch.git#{your branch name}
+$ npm install visualsearch@git+https://github.com/sunbirddcim/visualsearch.git#{your branch name}
 ```
