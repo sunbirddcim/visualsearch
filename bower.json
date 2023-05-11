@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "3.5.1",
-    "jquery-ui": "1.13.0",
+    "jquery-ui": "1.13.2",
     "backbone": ">=0.9.10",
     "underscore": "1.12.1"
   },
