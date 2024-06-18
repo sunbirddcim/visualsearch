@@ -1986,7 +1986,7 @@ VS.model.SearchQuery = Backbone.Collection.extend({
         </div>
       </div>
       `;
-    return _.escape(template);
+    return template;
   };
   window.JST['search_facet'] = function ({model, readOnly}) {
     let template = `
@@ -1998,11 +1998,11 @@ VS.model.SearchQuery = Backbone.Collection.extend({
         <i class="fa fa-times-circle"></i>
       </div>
     `;
-    return _.escape(template);
+    return template;
   };
   window.JST['search_input'] = function ({readOnly}) {
     let template = `<input type="text" class="ui-menu" ${readOnly ? 'disabled="disabled"' : ''} />`;
-    return _.escape(template);
+    return template;
   };
       
 
