@@ -1965,7 +1965,11 @@ VS.model.SearchQuery = Backbone.Collection.extend({
 })();
 (function(){
   window.JST = window.JST || {};
-  window.JST['search_box'] = function (readOnly) {
+  // window.JST['search_box'] = function (readOnly) {
+
+  // };
+
+  window.JST['search_box'] = function ({readOnly}) {
     let template = `
       <div class="VS-search${readOnly ? ' VS-readonly' : ''}">
         <div class="VS-search-box-wrapper VS-search-box">
@@ -1982,7 +1986,7 @@ VS.model.SearchQuery = Backbone.Collection.extend({
       `;
     return _.escape(template);
   };
-  window.JST['search_facet'] = function (model, readOnly) {
+  window.JST['search_facet'] = function ({model, readOnly}) {
     let template = `
       ${model.has('category') ? `<div class="category">${model.get('category')}: </div>` : ''}
       <div class="search_facet_input_container">
@@ -1994,7 +1998,7 @@ VS.model.SearchQuery = Backbone.Collection.extend({
     `;
     return _.escape(template);
   };
-  window.JST['search_input'] = function (readOnly) {
+  window.JST['search_input'] = function ({readOnly}) {
     let template = `<input type="text" class="ui-menu" ${readOnly ? 'disabled="disabled"' : ''} />`;
     return _.escape(template);
   };
