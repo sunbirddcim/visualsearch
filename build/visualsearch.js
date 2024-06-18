@@ -1025,7 +1025,9 @@ VS.ui.SearchInput = Backbone.View.extend({
     this.box.bind('updated.autogrow', this.moveAutocomplete);
     this.box.bind('blur',  this.deferDisableEdit);
     this.box.bind('focus', this.addFocus);
-    this.setupAutocomplete();
+
+    console.log('this.box', this.box);
+    // this.setupAutocomplete();
 
     return this;
   },
